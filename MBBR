@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>文本框与图片并排展示</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 1000px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .text-box, .image-box {
+      flex: 1 1 50%;
+      box-sizing: border-box;
+    }
+
+    .text-box {
+      padding: 40px;
+    }
+
+    .text-box h1 {
+      margin-top: 0;
+      font-size: 32px;
+      color: #333;
+    }
+
+    .text-box h2 {
+      font-size: 20px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .text-box p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .image-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .text-box, .image-box {
+        flex: 1 1 100%;
+        padding: 20px;
+      }
+
+      .text-box {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-box">
+      <h1>Main Benefits</h1>
+      <p>·Low capital cost</p>
+      <p>·Easy to retrofit existing systems</p>
+      <p>·Stable under load variations</p>
+      <p>·Increases plant capacity and allows upgrades to new nitrogen limits using existing tanks.</p>
+      <p>·Generates low solids and requires no sludge recycling.</p>
+      <p>It reduced about 90% activated sludge compared with AAO process.</p>
+      <p>·Reduces the load to downstream activated sludge process.</p>
+      <p>·Shaves off 60-80% influent BOD for easy industrial upgrades to existing systems</p>
+      <p>·Simple to operate</p>
+    </div>
+    <div class="image-box">
+      <img src="https://ueeshop.ly200-cdn.com/u_file/UPBE/UPBE662/2505/27/photo/mainBenefits-f8c4.png" alt="示例图片">
+    </div>
+  </div>
+</body>
+</html>
